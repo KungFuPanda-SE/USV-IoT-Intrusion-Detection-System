@@ -1,0 +1,34 @@
+[2026-10-09 08:54:54.555] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:54:54.569] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:54:54.570] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:54:54.570] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:54:54.570] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:54:54.571] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:54:54.572] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:54:54.572] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:54:54.572] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:54:54.572] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:54:54.573] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:54:54.573] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:54:54.573] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:54:54.574] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:54:54.574] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:54:57.001] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:54:59.422] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:55:01.869] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:55:04.295] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:55:06.724] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:55:09.158] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:55:11.591] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:55:14.027] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:55:16.458] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:55:18.902] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:55:21.331] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 08:55:23.766] [ERROR] [INTERNAL_ERROR] 'mavudp' object has no attribute 'target_address'
+[2026-10-09 09:52:51] [CRITICAL] [COMMAND_INJECTION_PREVENTED] MALICIOUS DISARM BLOCKED: USV cruising at 1.80 m/s!
+[2026-10-09 09:56:39] [CRITICAL] [COMMAND_INJECTION_PREVENTED] MALICIOUS DISARM BLOCKED: USV cruising at 1.80 m/s!
+[2026-10-09 09:56:41] [CRITICAL] [COMMAND_INJECTION_PREVENTED] UNAUTHORIZED MISSION_CLEAR_ALL BLOCKED: Wipe rejected.
+[2026-10-09 09:56:43] [CRITICAL] [COMMAND_INJECTION_PREVENTED] ROGUE WAYPOINT BLOCKED: (50.0000, 50.0000) outside Geofence!
+[2026-10-09 09:57:21] [CRITICAL] [COMMAND_INJECTION_PREVENTED] MALICIOUS DISARM BLOCKED: USV cruising at 1.80 m/s!
+[2026-10-09 09:57:23] [CRITICAL] [COMMAND_INJECTION_PREVENTED] UNAUTHORIZED MISSION_CLEAR_ALL BLOCKED: Wipe rejected.
+[2026-10-09 09:57:25] [CRITICAL] [COMMAND_INJECTION_PREVENTED] ROGUE WAYPOINT BLOCKED: (50.0000, 50.0000) outside Geofence!
