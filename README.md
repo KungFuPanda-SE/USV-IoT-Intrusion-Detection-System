@@ -11,13 +11,13 @@ An inline **Application-Layer Gateway (ALG)** and **Intrusion Prevention System 
 
 ## 1. Problem Statement & Threat Model
 
-Unmanned Surface Vehicles (USVs) operating in coastal and maritime environments rely on connectionless UDP transport for telemetry links (LTE, maritime mesh radio, or satellite). Unlike TCP, UDP avoids **Head-of-Line (HoL) blocking** and retransmission delays, ensuring real-time vehicle awareness.
+Unmanned Surface Vehicles (USVs) operating in coastal and maritime environments rely on connectionless UDP transport for telemetry links (LTE, maritime mesh radio, or satellite). Unlike TCP, UDP avoids **Head-of-Line (HoL) blocking** and retransmission delays, ensuring real-time vehicle situational awareness.
 
 However, standard MAVLink networks lack native link-layer authentication. An attacker on the local network or cellular subnet can inject raw UDP datagrams directly into the vehicle's telemetry stream.
 
 ### Exploited Vulnerabilities:
-1. **Kinetic Disarm (Remote Engine Cutoff):** Forcing `MAV_CMD_COMPONENT_ARM_DISARM` with parameter `1=0` while the vessel is underway, causing propulsion loss and drift.
-2. **Autonomous Memory Erasure:** Injecting `MISSION_CLEAR_ALL` (Message ID 45) to erase autonomous waypoint plans.
+1. **Kinetic Disarm (Remote Engine Cutoff):** Forcing `MAV_CMD_COMPONENT_ARM_DISARM` with parameter `1=0` while the vessel is underway, causing sudden propulsion loss and drift.
+2. **Autonomous Memory Erasure:** Injecting `MISSION_CLEAR_ALL` (Message ID 45) to erase autonomous waypoint navigation plans.
 3. **Spatial Hijacking (Geofence Breach):** Injecting spoofed `MISSION_ITEM` coordinates to divert the vessel outside authorized operational sectors.
 
 ---
@@ -48,3 +48,45 @@ flowchart LR
     Sentinel -->|"Alert Audits"| Logs
     Sentinel -->|"Approved Commands Only"| USV
 ```
+
+### Port Mapping Topology:
+| Port | Protocol | Source | Destination | Purpose |
+| :--- | :--- | :--- | :--- | :--- |
+| **14550** | UDP | `usv_sim.py` | `sentinel.py` | Raw vehicle telemetry stream |
+| **14551** | UDP | `attacker.py` | `sentinel.py` | External command intake / attack vector |
+| **14552** | UDP | `sentinel.py` | Mission Planner | Optional verified GCS telemetry mirror |
+
+---
+
+
+## 3. Quickstart & Reproducibility
+
+### Prerequisites
+* Windows, Linux, or macOS
+* Python 3.9+
+* `pymavlink`
+
+```bash
+pip install pymavlink
+```
+
+### Execution Steps
+Open three terminal windows inside the `src/` directory:
+
+```bash
+# Terminal 1: Launch the Virtual USV IoT Node (Cruises autonomously at 1.80 m/s)
+python usv_sim.py
+
+# Terminal 2: Launch the USV-Sentinel Security Gateway
+python sentinel.py
+
+# Terminal 3: Fire the Exploit Suite
+python attacker.py
+```
+
+
+
+---
+
+## 4. Author & Engineering Context
+Engineered by a Software Engineer & Cybersecurity Student specializing in autonomous surface vessels (USVs), embedded IoT communication pipelines, and cyber-physical security systems.
